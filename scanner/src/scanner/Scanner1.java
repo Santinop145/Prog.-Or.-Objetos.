@@ -6,6 +6,8 @@ public class Scanner1 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
+		// Practica 2
+		
 		/* int promedioInt = 0;
 		double nota1 = 0;
 		double nota2 = 0;
@@ -31,7 +33,9 @@ public class Scanner1 {
 		System.out.println(segundos + " segundo/s a minuto/s son: " + minutos + " minuto/s y los segundo/s restantes son: " + segundosRestantes);
 		*/
 		
-		System.out.println("Escribe tu nombre: ");
+		// Practica 3
+		
+		/*System.out.println("Escribe tu nombre: ");
 		String nombre = sc.next();
 		System.out.println("Escribe tu apellido: ");
 		String apellido = sc.next();
@@ -39,6 +43,23 @@ public class Scanner1 {
 		System.out.println("La longitud de tu nombre es: " + nombre.length() + "\nEn mayusculas es: " + nombre.toUpperCase() + "\nEn minusculas: " + nombre.toLowerCase() + "\nTu nombre completo es: " + nombrecompleto + "\nEl indice de tu apellido: " + nombrecompleto.indexOf(apellido))
 		;
 		sc.close();
+		 */
+		
+		// Practica 4
+		
+		int golesafavor = 22;
+		int golesencontra = 7;
+		
+		System.out.println("Goles a favor hasta ayer: " + golesafavor + "\nGoles en contra hasta ayer: " + golesencontra);
+		
+		int diferencia = golesafavor;
+		golesafavor += 4;
+		diferencia = golesafavor - diferencia;
+		int diferenciaencontra = golesencontra;
+		golesencontra++;
+		diferenciaencontra = golesencontra - diferenciaencontra;
+		
+		System.out.println("Goles a favor actuales: " + golesafavor + "\nGoles en contra actuales: " + golesencontra + "\nLa diferencia es: " + diferencia + " de goles a favor y " + diferenciaencontra + " de goles en contra.");
 	}
 
 }

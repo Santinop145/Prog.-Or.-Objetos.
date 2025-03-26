@@ -24,11 +24,21 @@ public class Scanner1 {
 		System.out.println("El resultado de " + Celsius + "° Celsius a Fahrenheit es: " + (int) Fahrenheit);
 		*/
 		
-		System.out.println("Ingrese la cantidad de segundos.");
+		/*System.out.println("Ingrese la cantidad de segundos.");
 		int segundos = sc.nextInt();
 		double minutos = segundos / 60;
 		int segundosRestantes = segundos % 60;
 		System.out.println(segundos + " segundo/s a minuto/s son: " + minutos + " minuto/s y los segundo/s restantes son: " + segundosRestantes);
+		*/
+		
+		System.out.println("Escribe tu nombre: ");
+		String nombre = sc.next();
+		System.out.println("Escribe tu apellido: ");
+		String apellido = sc.next();
+		String nombrecompleto = (nombre + " " + apellido);
+		System.out.println("La longitud de tu nombre es: " + nombre.length() + "\nEn mayusculas es: " + nombre.toUpperCase() + "\nEn minusculas: " + nombre.toLowerCase() + "\nTu nombre completo es: " + nombrecompleto + "\nEl indice de tu apellido: " + nombrecompleto.indexOf(apellido))
+		;
+		sc.close();
 	}
 
 }

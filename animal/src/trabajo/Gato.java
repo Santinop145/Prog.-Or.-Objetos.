@@ -1,4 +1,4 @@
-package trabajo;
+package animales;
 
 public class Gato extends Animal{
 	int dependencia = 0;

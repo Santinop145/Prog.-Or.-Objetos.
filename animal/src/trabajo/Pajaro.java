@@ -1,32 +1,33 @@
 package animales;
 
-public class Perro extends Animal{
+public class Pajaro extends Animal{
 	int dependencia = 0;
 	
-	Perro(double vida, String especie, double fuerza, int dependencia, boolean vivo) {
+	Pajaro(double vida, String especie, double fuerza, int dependencia, boolean vivo) {
 		super(vida, especie, fuerza, vivo);
 	}
 	
 	void escapar(){
 		if(dependencia < 60) {
 			if(Math.random()*100 > 60) {
-				System.out.println("El perro escapo.");
+				System.out.println("El pajaro escapo.");
 			} else {
 				System.out.println("El escape fallo.");
 			}
 		} else {
-			System.out.println("El perro no quiere escapar.");
+			System.out.println("El pajaro no quiere escapar.");
 		}
 	}
 	
+	
 	void maullar(){
-		System.out.println("guau");
+		System.out.println("cak");
 	}
 	
 	@Override
 	
 	void alimentarse() {
 		super.alimentarse();
-		System.out.println("El perro come carne.");
+		System.out.println("El pajaro come insectos.");
 	}
 }

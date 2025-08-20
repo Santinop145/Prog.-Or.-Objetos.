@@ -1,4 +1,4 @@
-package holaprivate;
+package tpEncapsulamiento;
 
 public class Vehiculo {
 	private String patente;

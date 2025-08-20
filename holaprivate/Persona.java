@@ -1,18 +1,29 @@
-package holaprivate;
+package tpEncapsulamiento;
 
 public class Persona{
 	private String nombre;
 	private int edad;
+	private Direccion direccion;
+	private Pasaporte pasaporte;
 	
-	Persona(String nombre, int edad){
+	Persona(String nombre, int edad, Direccion direccion, Pasaporte pasaporte){
 		this.nombre = nombre;
 		this.edad = edad;
+		this.direccion = direccion;
+		this.pasaporte = pasaporte;
 	}
+	
 	public String getNombre() {
 		return nombre;
 	}
 	public int getEdad() {
 		return edad;
+	}
+	public String getDireccion() {
+		return direccion.getCalle() + " " + direccion.getCiudad();
+	}
+	public String getPasaporte() {
+		return pasaporte.getNumeroEmision() + " " + pasaporte.getPais();
 	}
 
 	public void setNombre(String nombre) {
@@ -28,54 +39,13 @@ public class Persona{
 		}else
 			this.edad = edad;
 	}
-
-	public static void main(String[] args) {
-		Persona newPersona = new Persona("Carlos", 50);
-		System.out.println(newPersona.getEdad());
-		System.out.println(newPersona.getNombre());
-		
-		newPersona.setEdad(40);
-		newPersona.setNombre("Fabian");
-		
-		System.out.println(newPersona.getEdad());
-		System.out.println(newPersona.getNombre());
-		
-		Producto newProducto = new Producto("Shampoo", 400);
-		System.out.println(newProducto.getPrecio());
-		System.out.println(newProducto.getNombre());
-		
-		newProducto.setPrecio(520);
-		newProducto.setNombre("Jabon");
-		
-		System.out.println(newProducto.getPrecio());
-		System.out.println(newProducto.getNombre());
-		
-		EmailUsuario newEmail = new EmailUsuario("santinoalessandrop@gmail.com");
-		
-		System.out.println(newEmail.getEmail());
-		
-		newEmail.setEmail("santinoportaluppi145@gmail.com");
-		
-		System.out.println(newEmail.getEmail());
-		
-		Vehiculo newVehiculo = new Vehiculo("AA724DD", 80);
-		
-		System.out.println(newVehiculo.getPatente());
-		System.out.println(newVehiculo.getVelocidadMaxima());
-		
-		newVehiculo.setPatente("AA335BE");
-		newVehiculo.setVelocidadMaxima(200);
-		
-		System.out.println(newVehiculo.getPatente());
-		System.out.println(newVehiculo.getVelocidadMaxima());
-		
-		Transferencia newTransferencia = new Transferencia(10000, "1238128382138128234524213","1238134567138128234524213");
-		
-		System.out.println(newTransferencia.getMonto());
-		System.out.println(newTransferencia.getCbuOrigen());
-		System.out.println(newTransferencia.getCbuDestino());
-		
-		
+	
+	public void setDireccion(Direccion direccion) {
+		this.direccion = direccion;
+	}
+	
+	public void setPasaporte(Pasaporte pasaporte) {
+		this.pasaporte = pasaporte;
 	}
 }
 

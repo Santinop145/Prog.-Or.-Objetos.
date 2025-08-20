@@ -1,4 +1,4 @@
-package holaprivate;
+package tpEncapsulamiento;
 
 public class Transferencia {
 	private int monto;
@@ -19,14 +19,14 @@ public class Transferencia {
 	}
 	
 	public void setCbuOrigen(String cbuOrigen) {
-		if((cbuOrigen.length() < 22 || cbuOrigen.length() > 22) && !cbuDestino.equals(cbuOrigen)) {
+		if((cbuOrigen.length() < 22 || cbuOrigen.length() > 22) && !this.cbuDestino.equals(cbuOrigen)) {
 			System.out.println("El CBU debe tener 22 caracteres en total y no ser igual al de destino u origen.");
 		}else
 			this.cbuOrigen = cbuOrigen;
 	}
 	
 	public void setCbuDestino(String cbuDestino) {
-		if((cbuDestino.length() < 22 || cbuDestino.length() > 22) && !cbuDestino.equals(cbuOrigen)) {
+		if((cbuDestino.length() < 22 || cbuDestino.length() > 22) && !this.cbuOrigen.equals(cbuDestino)) {
 			System.out.println("El CBU debe tener 22 caracteres en total y no ser igual al de destino u origen.");
 		}else
 			this.cbuDestino = cbuDestino;

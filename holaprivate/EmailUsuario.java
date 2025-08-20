@@ -1,4 +1,4 @@
-package holaprivate;
+package tpEncapsulamiento;
 
 public class EmailUsuario {
 	private String email;
